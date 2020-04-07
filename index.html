@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   
@@ -13,7 +14,7 @@
   <br>
   <div class="container">
     <div class="jumbotron text-light text-center pb-4 pt-4 mainJumbo">
-      <h1 class="jumboText">TRAIN SCHEDULE</h1>
+      <h1 class="jumboText">Train Schedule</h1>
     </div>
   </div>
 
@@ -21,7 +22,7 @@
     <div class="jumbotron pb-0 pt-0 mb-0 secJumbo">
       <p class="secTitles text-light">Current Train Schedule</p>
     </div>
-      <table class="table border border-dark pl-3 pr-3 pt-3 pb-5 mb-4">
+      <table class="table text-center border border-dark pl-3 pr-3 pt-3 pb-5 mb-4 bg-light opac">
         <thead class="thead-dark">
           <tr>
             <th>Train Name</th>
@@ -47,7 +48,7 @@
     <div class="jumbotron pb-0 pt-0 mb-0 secJumbo">
       <p class="secTitles text-light">Add Train</p>
     </div>  
-      <form class="border border-dark pl-3 pr-3 pt-3 pb-5">
+      <form class="border border-dark pl-3 pr-3 pt-3 pb-5 bg-light opac">
         <div class="form-group">
           <label for="trainName">Train Name</label>
           <input type="text" class="form-control" id="trainName" placeholder="Speedy Rails" name="trainName">
@@ -64,9 +65,11 @@
           <label for="minutes">Frequency (min)</label>
           <input type="number" class="form-control" id="minutes" placeholder="1-60" min="1" max="60" name="minutes">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-dark lead">Submit</button>
       </form>
   </div>
+
+  <br><br>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
