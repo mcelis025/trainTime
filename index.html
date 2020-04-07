@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   
@@ -11,11 +12,64 @@
 <body>
   <br>
   <div class="container">
-    <div class="jumbotron text-light text-center">
-      <h1>Train Schedule</h1>
+    <div class="jumbotron text-light text-center pb-4 pt-4 mainJumbo">
+      <h1 class="jumboText">TRAIN SCHEDULE</h1>
     </div>
   </div>
-    
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <div class="container">
+    <div class="jumbotron pb-0 pt-0 mb-0 secJumbo">
+      <p class="secTitles text-light">Current Train Schedule</p>
+    </div>
+      <table class="table border border-dark pl-3 pr-3 pt-3 pb-5 mb-4">
+        <thead class="thead-dark">
+          <tr>
+            <th>Train Name</th>
+            <th>Destination</th>
+            <th>Frequency (min)</th>
+            <th>Next Arrival</th>
+            <th>Minutes Away</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Speedy </td>
+            <td>New York</td>
+            <td>20</td>
+            <td>06:00 PM</td>
+            <td>20</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+
+  <div class="container">
+    <div class="jumbotron pb-0 pt-0 mb-0 secJumbo">
+      <p class="secTitles text-light">Add Train</p>
+    </div>  
+      <form class="border border-dark pl-3 pr-3 pt-3 pb-5">
+        <div class="form-group">
+          <label for="trainName">Train Name</label>
+          <input type="text" class="form-control" id="trainName" placeholder="Speedy Rails" name="trainName">
+        </div>
+        <div class="form-group">
+          <label for="destination">Destination</label>
+          <input type="text" class="form-control" id="destination" placeholder="Los Angeles" name="destination">
+        </div>
+        <div class="form-group">
+          <label for="trainTime">First Train Time (HH:mm - military time)</label>
+          <input placeholder="Enter Time" type="text" id="trainTime" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="minutes">Frequency (min)</label>
+          <input type="number" class="form-control" id="minutes" placeholder="1-60" min="1" max="60" name="minutes">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 </html>
