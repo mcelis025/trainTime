@@ -6,7 +6,9 @@ body {
 }
 .mainJumbo {
     background-image: url("../images/gradient.jpg");
-    background-size: cover; 
+    background-size: 100%;
+    background-repeat: repeat-x repeat-y;
+    background-position: center center;
 }
 
 .jumboText {
@@ -18,7 +20,9 @@ body {
 
 .secJumbo {
     background-image: url("../images/gradient.jpg");
-    background-size: cover;
+    background-size: 100%;
+    background-repeat: repeat-x repeat-y;
+    background-position: center center;
 }
 
 .secTitles {

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
+  <link rel="icon" href="assets/images/umbrella.jpg" type="image/gif" sizes="16x16">
   <!-- Firebase References -->
   <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
@@ -20,15 +21,15 @@
   <br>
   <div class="container">
     <div class="jumbotron text-light text-center pb-4 pt-4 shadow border border-dark mainJumbo">
-      <h1 class="jumboText">Zap Track Train Schedule</h1>
+      <h1 class="jumboText"><span class="fas fa-train"></span> Raccoon City Train Schedule</h1>
     </div>
   </div>
 
   <div class="container">
     <div class="jumbotron pb-0 pt-0 mb-3 shadow secJumbo">
-      <p class="secTitles mb-0 text-light">Current Train Schedule</p>
+      <p class="secTitles mb-0 text-light"><span class="far fa-calendar-alt"> </span> Current Train Schedule</p>
     </div>
-      <table class="table displayTable text-center border border-dark pl-3 pr-3 pt-3 pb-5 mb-4 bg-light shadow opac">
+      <table class="table text-center border border-dark pl-3 pr-3 pt-3 pb-5 mb-4 bg-light shadow opac" id="schd">
         <thead class="thead-dark">
           <tr>
             <th>Train Name</th>
@@ -52,7 +53,7 @@
 
   <div class="container">
     <div class="jumbotron pb-0 pt-0 mb-3 shadow secJumbo">
-      <p class="secTitles text-light">Add Train</p>
+      <p class="secTitles text-light"><span class="fas fa-plus-circle"> </span> Add Train</p>
     </div>  
       <form class="border border-dark pl-3 pr-3 pt-3 pb-5 bg-light shadow opac">
         <div class="form-group">
@@ -77,6 +78,8 @@
 
   <br><br>
 
+  <!-- font awesome -->
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
   <!-- moment.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
   <!-- jQuery -->
