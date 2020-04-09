@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Firebase References -->
+  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+  <!-- google fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -13,16 +19,16 @@
 <body>
   <br>
   <div class="container">
-    <div class="jumbotron text-light text-center pb-4 pt-4 mainJumbo">
-      <h1 class="jumboText">Train Schedule</h1>
+    <div class="jumbotron text-light text-center pb-4 pt-4 shadow border border-dark mainJumbo">
+      <h1 class="jumboText">Zap Track Train Schedule</h1>
     </div>
   </div>
 
   <div class="container">
-    <div class="jumbotron pb-0 pt-0 mb-0 secJumbo">
-      <p class="secTitles text-light">Current Train Schedule</p>
+    <div class="jumbotron pb-0 pt-0 mb-3 shadow secJumbo">
+      <p class="secTitles mb-0 text-light">Current Train Schedule</p>
     </div>
-      <table class="table text-center border border-dark pl-3 pr-3 pt-3 pb-5 mb-4 bg-light opac">
+      <table class="table displayTable text-center border border-dark pl-3 pr-3 pt-3 pb-5 mb-4 bg-light shadow opac">
         <thead class="thead-dark">
           <tr>
             <th>Train Name</th>
@@ -45,10 +51,10 @@
   </div>
 
   <div class="container">
-    <div class="jumbotron pb-0 pt-0 mb-0 secJumbo">
+    <div class="jumbotron pb-0 pt-0 mb-3 shadow secJumbo">
       <p class="secTitles text-light">Add Train</p>
     </div>  
-      <form class="border border-dark pl-3 pr-3 pt-3 pb-5 bg-light opac">
+      <form class="border border-dark pl-3 pr-3 pt-3 pb-5 bg-light shadow opac">
         <div class="form-group">
           <label for="trainName">Train Name</label>
           <input type="text" class="form-control" id="trainName" placeholder="Speedy Rails" name="trainName">
@@ -71,8 +77,10 @@
 
   <br><br>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <!-- moment.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 </html>

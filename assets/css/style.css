@@ -1,17 +1,19 @@
 body {
-    background-image: url("../images/tracks.jpg");
-    background-size: cover;
-    background-repeat: repeat-x;
+    background-image: url("../images/trainstation.jpg");
+    background-size: 100%;
+    background-repeat: repeat-x repeat-y;
+    background-position: center center;
 }
 .mainJumbo {
     background-image: url("../images/gradient.jpg");
-    background-size: cover;
+    background-size: cover; 
 }
 
 .jumboText {
     font-size: 3.5rem;
     font-family: 'Ubuntu', sans-serif;
     font-variant: small-caps;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .secJumbo {
@@ -22,10 +24,11 @@ body {
 .secTitles {
     font-size: 1.25rem;
     font-family: 'Anton', sans-serif;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .opac {
-    opacity: .95;
+    opacity: .9;
 }
 
 .btn {
