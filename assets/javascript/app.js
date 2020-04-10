@@ -20,12 +20,14 @@ $(document).ready(function () {
 
     $("button").on("click", function () {
 
-		event.preventDefault();
+        //event.preventDefault();
 
         var name = $("#trainName").val();
         var destination = $("#destination").val();
         var userTime = $("#trainTime").val();
         var minutes = $("#minutes").val();
+
+        var converted = "";
 
         database.ref().push({
             tName: name,
@@ -33,28 +35,27 @@ $(document).ready(function () {
             initialT: userTime,
             frequency: minutes
         });
-
-        database.ref().on("child_added", function (snapshot) {
-            var companyName = snapshot.val().tName;
-            var dest = snapshot.val().tDestination;
-            var trainOne = snapshot.val().initialT;
-            var freqMin = snapshot.val().frequency;
-
-            var dateBegin = moment(trainOne, 'hh:mm A');
-            var dateNow = moment();
-
-
-
-            var newRow = $("<tbody>").append($("<tr>").append(
-                $("<td>").text(companyName),
-                $("<td>").text(dest),
-                $("<td>").text(freqMin),
-                $("<td>").text(nextArrival),
-                $("<td>").text(minAway)
-            ));
-            $("#schd").append(newRow);
-            moment(dateBegin).diff(moment(dateNow))
-        });
     });
+
+    database.ref().on("child_added", function (snapshot) {
+        var companyName = snapshot.val().tName;
+        var dest = snapshot.val().tDestination;
+        var trainOne = snapshot.val().initialT;
+        var freqMin = snapshot.val().frequency;
+
+        var dateBegin = moment(trainOne, 'hh:mm A');
+        var dateNow = moment();
+
+        var newRow = $("<tbody>").append($("<tr>").append(
+            $("<td>").text(companyName),
+            $("<td>").text(dest),
+            $("<td>").text(freqMin)
+            //$("<td>").text(nextArrival),
+            //$("<td>").text(minAway)
+        ));
+        $("#schd").append(newRow);
+        moment(dateBegin).diff(moment(dateNow))
+    });
+
 
 });
