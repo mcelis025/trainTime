@@ -16,46 +16,51 @@ $(document).ready(function () {
     firebase.analytics();
 
     var database = firebase.database();
+     
+    var name = "";
+    var destination = "";
+    var userTime = "";
+    var minutes = "";
 
+    //if (minutes === "" || userTime === "" || destination === "" || name === "" ){
+    //    alert("Please fill out fields correctly.")
+    //} else {
 
     $("button").on("click", function () {
-
-        //event.preventDefault();
-
-        var name = $("#trainName").val();
-        var destination = $("#destination").val();
-        var userTime = $("#trainTime").val();
-        var minutes = $("#minutes").val();
-
-        var converted = "";
+        name = $("#trainName").val();
+        destination = $("#destination").val();
+        userTime = $("#trainTime").val();
+        minutes = $("#minutes").val();    
 
         database.ref().push({
             tName: name,
             tDestination: destination,
             initialT: userTime,
-            frequency: minutes
+            frequency: minutes,
         });
     });
-
+//};
     database.ref().on("child_added", function (snapshot) {
+
         var companyName = snapshot.val().tName;
         var dest = snapshot.val().tDestination;
         var trainOne = snapshot.val().initialT;
         var freqMin = snapshot.val().frequency;
 
-        var dateBegin = moment(trainOne, 'hh:mm A');
-        var dateNow = moment();
+        var timeConverted = moment(trainOne, "HH:mm").subtract(1, "years");
+        var difference = moment().diff(moment(timeConverted), "minutes");
+        var remainder = difference % freqMin;
+        var newTrain = freqMin - remainder;
+        var nextArrival = moment().add(newTrain, "minutes");
+        var myTrain = moment(nextArrival).format("hh:mm A");
 
         var newRow = $("<tbody>").append($("<tr>").append(
             $("<td>").text(companyName),
             $("<td>").text(dest),
-            $("<td>").text(freqMin)
-            //$("<td>").text(nextArrival),
-            //$("<td>").text(minAway)
+            $("<td>").text(freqMin),
+            $("<td>").text(myTrain),
+            $("<td>").text(newTrain)
         ));
         $("#schd").append(newRow);
-        moment(dateBegin).diff(moment(dateNow))
     });
-
-
 });

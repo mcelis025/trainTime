@@ -21,12 +21,12 @@
   <br>
   <div class="container">
     <div class="jumbotron text-light text-center pb-4 pt-4 shadow border border-dark mainJumbo">
-      <h1 class="jumboText"><span class="fas fa-train"></span> Raccoon City Train Schedule</h1>
+      <h1 class="jumboText"><span class="fas fa-train"></span> Raccoon City Express Schedule</h1>
     </div>
   </div>
 
   <div class="container">
-    <div class="jumbotron pb-0 pt-0 mb-3 shadow secJumbo">
+    <div class="jumbotron pb-0 pt-0 mb-1 border border-dark shadow secJumbo">
       <p class="secTitles mb-0 text-light"><span class="far fa-calendar-alt"> </span> Current Train Schedule</p>
     </div>
       <table class="table text-center border border-dark pl-3 pr-3 pt-3 pb-5 mb-4 bg-light shadow opac" id="schd">
@@ -40,41 +40,35 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Speedy </td>
-            <td>New York</td>
-            <td>20</td>
-            <td>06:00 PM</td>
-            <td>20</td>
-          </tr>
         </tbody>
       </table>
   </div>
 
   <div class="container">
-    <div class="jumbotron pb-0 pt-0 mb-3 shadow secJumbo">
-      <p class="secTitles text-light"><span class="fas fa-plus-circle"> </span> Add Train</p>
+    <div class="jumbotron pb-0 pt-0 mb-1 border border-dark shadow secJumbo">
+      <p class="secTitles mb-0 text-light"><span class="fas fa-plus-circle"> </span> Add Train</p>
     </div>  
-      <form class="border border-dark pl-3 pr-3 pt-3 pb-5 bg-light shadow opac">
+      <form class="border border-dark pl-3 pr-3 pt-3 pb-3 bg-light shadow opac">
         <div class="form-group">
           <label for="trainName">Train Name</label>
           <input type="text" class="form-control" id="trainName" placeholder="Speedy Rails" name="trainName">
         </div>
         <div class="form-group">
           <label for="destination">Destination</label>
-          <input type="text" class="form-control" id="destination" placeholder="Los Angeles" name="destination">
+          <input type="text" class="form-control" id="destination" placeholder="Raccoon City" name="destination">
         </div>
         <div class="form-group">
           <label for="trainTime">First Train Time (HH:mm - military time)</label>
-          <input placeholder="Enter Time" type="text" id="trainTime" class="form-control">
+          <input placeholder="0030" type="text" id="trainTime" class="form-control">
         </div>
         <div class="form-group">
           <label for="minutes">Frequency (min)</label>
-          <input type="number" class="form-control" id="minutes" placeholder="1-60" min="1" max="60" name="minutes">
+          <input type="number" class="form-control" id="minutes" placeholder="10" min="1" max="60" name="minutes">
         </div>
-        <button type="submit" class="btn btn-dark lead">Submit</button>
+          <button type="submit" class="btn btn-dark lead addTrain">Submit</button>
+        </div>
       </form>
-  </div>
+    </div>
 
   <br><br>
 
